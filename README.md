@@ -28,3 +28,26 @@ exports = function () {
   return events.aggregate(pipeline);
 };
 ```
+# Transaction App Services Function
+```
+exports = function () {
+  const service = context.services.get("mongodb-datafederation");
+  const db = service.db("fraud_detection")
+  const events = db.collection("Transaction");
+  const pipeline = [
+    {
+      "$out": {
+        "s3": {
+          "bucket": "your-S3-bucket-name",
+          "region": "us-east-1",
+          "filename": "fraud-detection/canvas/Transaction",
+          "format": {
+            "name": "csv",
+            "maxFileSize": "10GB"
+          }
+        }
+      }
+    }];
+  return events.aggregate(pipeline);
+};
+```
