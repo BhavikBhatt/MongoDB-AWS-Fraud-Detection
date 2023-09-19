@@ -1,5 +1,13 @@
 # MongoDB-AWS-Fraud-Detection
 
+# AWS Access Codes
+```
+5ee8-0fbe8a-2d
+```
+```
+c805-0a4cff-0f
+```
+
 # Download the 2 CSV Data Files
 
 ## Data Ingestion Using MongoDB Compass (walkthrough)
