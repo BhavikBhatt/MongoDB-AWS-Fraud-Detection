@@ -2,6 +2,8 @@
 
 # Download the 2 CSV Data Files
 
+## Data Ingestion Using MongoDB Compass (walkthrough)
+
 ## Data Ingestion Using mongoimport in the Terminal (slower alternative to Compass)
 ```
 mongoimport --uri="<connection-string>" --db=fraud_detection --collection=Identity --file=Fraud_identity.csv --type=csv --headerline
